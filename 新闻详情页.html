@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>玩具详情页</title>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous"><!-- 导入bootstrap v5的CSS 文件去除integrity部分 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script><!-- 导入bootstrap v5的js文件集成包去除integrity部分 -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<style>
+       #header{
+            width: 1200px;
+            height: 50px;
+            margin: 0;
+        }
+        #header .a1{
+            margin-top: 10px;
+            float: left;
+            font-size: 15px;
+            color: black;
+        }
+        #header .a2{
+            margin-top: 15px;
+            float: right;
+            text-align: left;
+            font-size: 10px;
+            color: black;
+        }
+        #header li{
+            float: left;
+            margin-left: 15px;
+            list-style: none;
+        }
+        .a1 h5{margin-left: 20px;}
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        h5{
+          text-align: center;
+        }
+        p{
+          text-align: center;
+        }
+
+        .containter {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 0;
+        }
+
+        .list li {
+            border: 1px solid seashell;
+            width: 30%;
+        }
+
+        .list img {
+            width: 300px;
+            height: 300px;
+        }
+        #footer .f1 li{
+          float: left;
+          list-style: none;
+          width: 22%;
+          margin-left: 25px;
+          margin-top: 30px;
+          }
+          
+        #footer .f1 li img{
+          width: 150px;
+          height: 150px;
+          margin-left: 60px;
+          }
+          
+        #footer h3{
+          clear: both;
+          text-align: center;
+          }
+          #footer p{
+             text-align: center;
+           }
+
+
+</style>
+</head>
+ 
+<body>
+
+        <div id="container" align="center">
+            <div style="background-color:whitesmoke;">
+                <div id="header">
+                    <div class="a1">
+                        <h5>
+                            <strong>TNT粉丝俱乐部</strong>
+                        </h5>
+                    </div>
+                    <div class="a2">
+                        <ul>
+                          <li><a href="企业站.html"><strong>TNT的首页</strong>&nbsp;</a></li>
+                          <li><a href="TNT的写真.html"><strong>TNT的写真</strong>&nbsp;</a></li>
+                            <li><a href="新闻列表.html"><strong>TNT的新闻</strong>&nbsp;</a></li>
+                            <li><a href="关于TNT.html"><strong>关于我们</strong>&nbsp;</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+         </div>
+<!-- 中部 --> <!-- 
+    <div class="containter1"></div>
+    <script>
+        console.log(window.location.search.split('=')[1])
+        let id = window.location.search.split('=')[1]
+     axios.get(`https://lingqule.papamk.com/wp-json/w2w/v1/products/${id}`).then(function(res){ 
+           // axios.get(`https://lingqule.papamk.com/wp-json/w2w/v1/products/${window.location.search}`) .then(function(res){ 
+          console.log(res.data);
+          let title= $(`<h1 style="text-align: center;">${res.data.name}</h1>`);
+          let img = $(`<img style="width: 500px;margin-left: 350px;hight:500px;" src=${res.data.images[0].src} />`);
+          $('.containter').append(img);
+          $('.containter').append(title);
+          })
+     </script>       -->
+     
+<!-- 中部 --> 
+<br>
+<br>
+    <div class="containter"></div>
+    <script>
+        console.log(window.location.search.split('=')[1])
+        let id = window.location.search.split('=')[1]
+     axios.get(`https://lingqule.papamk.com/wp-json/w2w/v1/products/${id}`).then(function(res){ 
+           // axios.get(`https://lingqule.papamk.com/wp-json/w2w/v1/products/${window.location.search}`) .then(function(res){ 
+          console.log(res.data);
+          let title= $(`<h1 style="text-align: center;">${res.data.name}</h1>`);
+          let img = $(`<img style="width: 500px;margin-left: 350px;hight:500px;" src=${res.data.images[0].src} />`);
+          $('.containter').append(img);
+          $('.containter').append(title);
+          })
+     </script>      
+       <!--尾部-->
+       <h4>
+        <br><br>
+        <br></h4>
+
+        <div class="card text-center">
+            <div class="card-header">
+              <strong>ABOUT US</strong>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title"><strong>时代峰峻</strong></h5>
+                <p class="card-text">北京时代峰峻文化艺术发展有限公司（Time Fengjun Entertainment）成立于2009年。<br>
+                  公司本部设立在北京，是一家集组织大型文艺演出、艺人培训、艺人经纪为一体的专业文化娱乐传播机构，也是率先采用练习生养成模式进行明星培养的国内经纪娱乐公司。<br>
+      
+                  公司从成立之初就开始招募练习生，并着手打造艺人品牌TF家族，现公司旗下所属艺人中拥有当红组合TFBOYS、时代少年团。</p>
+              </div>
+          </div>
+
+
+     
+      <div id="footer"> 
+        <div class="f1">
+          <ul>
+            <li>
+              <div>
+              <img src="11.jpg" />
+              <p style="margin-top: 10px;">重庆市南岸区南滨路<br>22号长江国际18楼</p>
+              </div>
+            </li>
+            <li>
+              <div>
+              <img src="12.jpg" />
+              <p style="margin-top: 10px;">2668745269@qq.com</p>
+               </div>
+            </li>
+            <li>
+              <div>
+              <img src="15.jpg" />
+              <p style="margin-top: 10px;">110-110-1110</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <img src="14.jpg" alt="">
+                <p style="text-align: center;">扫一扫加入TNT粉丝俱乐部</p>
+            </li>
+          </ul>
+        </div><!-- f1 -->
+
+  
+      <div style="width: 200px;margin: 0 auto;">
+        <hr style="margin-top: 50px;width:200px;"><br>
+        <p>&nbsp;&nbsp;版权所有@TNT俱乐部</p>
+      </div>
+     
+</body>
+</html>

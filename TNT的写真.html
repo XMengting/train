@@ -1,0 +1,536 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>TNT的写真</title>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous"><!-- 导入bootstrap v5的CSS 文件去除integrity部分 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script><!-- 导入bootstrap v5的js文件集成包去除integrity部分 -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<style>
+       #header{
+            width: 1200px;
+            height: 50px;
+            margin: 0;
+        }
+        #header .a1{
+            margin-top: 10px;
+            float: left;
+            font-size: 15px;
+            color: black;
+        }
+        #header .a2{
+            margin-top: 15px;
+            float: right;
+            text-align: left;
+            font-size: 10px;
+            color: black;
+        }
+        #header li{
+            float: left;
+            margin-left: 15px;
+            list-style: none;
+        }
+        .a1 h5{margin-left: 20px;}
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        h5{
+          text-align: center;
+        }
+        p{
+          text-align: center;
+        }
+
+        .containter {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 0;
+        }
+
+        .list li {
+            border: 1px solid seashell;
+            width: 30%;
+        }
+
+        .list img {
+            width: 300px;
+            height: 300px;
+        }
+        #footer .f1 li{
+          float: left;
+          list-style: none;
+          width: 22%;
+          margin-left: 25px;
+          margin-top: 30px;
+          }
+          
+        #footer .f1 li img{
+          width: 150px;
+          height: 150px;
+          margin-left: 60px;
+          }
+          
+        #footer h3{
+          clear: both;
+          text-align: center;
+          }
+          #footer p{
+             text-align: center;
+           }
+           .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      h4{
+          text-align: left;
+          margin-left: 80px;
+        }
+    h3{
+        font-size: 35px;
+        text-align: center;
+        background-color: whitesmoke;
+        margin-top: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 2;
+    }
+</style>
+</head>
+ 
+<body>
+
+        <div id="container" align="center">
+            <div style="background-color:whitesmoke;">
+                <div id="header">
+                    <div class="a1">
+                        <h5>
+                            <strong>TNT粉丝俱乐部</strong>
+                        </h5>
+                    </div>
+                    <div class="a2">
+                        <ul>
+                          <li><a href="企业站.html"><strong>TNT的首页</strong>&nbsp;</a></li>
+                            <li><a href="TNT的写真.html"><strong>TNT的写真</strong>&nbsp;</a></li>
+                            <li><a href="新闻列表.html"><strong>TNT的新闻</strong>&nbsp;</a></li>
+                            <li><a href="关于TNT.html"><strong>关于我们</strong>&nbsp;</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+         </div>
+
+ <!--中部
+
+ <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <img src="13.jpg" class="d-block w-100" alt="..." width="800px" height="600px">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Example headline.</h1>
+            <p>Some representative placeholder content for the first slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <img src="13.jpg" class="d-block w-100" alt="..." width="800px" height="600px">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Another example headline.</h1>
+            <p>Some representative placeholder content for the second slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <img src="13.jpg" class="d-block w-100" alt="..." width="800px" height="600px">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>One more for good measure.</h1>
+            <p>Some representative placeholder content for the third slide of this carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+-->
+<!--轮播图-->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+         <img src="舞.jpg" class="d-block w-100" alt="..." width="800px" height="600px">
+        <div class="container1">
+          <div class="carousel-caption text-start">
+            <h1 style="text-align: center;font-family: 'Courier New', Courier, monospace;">【舞象之年】第一篇章《舞》</h1>
+            <p>狂风暴雨也要陪你走更远 &nbsp;&nbsp;&nbsp;&nbsp;一起航向梦闪耀的彼岸</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Listening</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+         <img src="象.jpg" class="d-block w-100" alt="..." width="800px" height="600px">
+        <div class="container1">
+          <div class="carousel-caption">
+            <h1 style="font-family: 'Courier New', Courier, monospace;">【舞象之年】第二篇章《象》</h1>
+            <p>时间往前，少年成长 &nbsp;&nbsp;&nbsp;&nbsp;宣言仍无惧，冒险亦无畏</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Listening</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+         <img src="之.png" class="d-block w-100" alt="..." width="800px" height="600px">
+        <div class="container1">
+          <div class="carousel-caption">
+            <h1 style="text-align: center;font-family: 'Courier New', Courier, monospace;">【舞象之年】第三篇章《之》</h1>
+            <p>天色将晚，一场奇幻的盛宴即将开始<br>
+                现实世界的复杂难解，都将这天马行空的乐园中消散
+            </p>
+            <p><a class="btn btn-lg btn-primary" href="#">Listening</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="年.jpg" class="d-block w-100" alt="..." width="800px" height="600px">
+       <div class="container1">
+         <div class="carousel-caption text-end">
+           <h1 style="text-align: center;font-family: 'Courier New', Courier, monospace;">【舞象之年】第四篇章《年》</h1>
+           <p>小小的小孩需要点空间绽放光彩 &nbsp;&nbsp;&nbsp;&nbsp;小小的小孩会变得越来越厉害</p>
+           <p><a class="btn btn-lg btn-primary" href="#">Listening</a></p>
+         </div>
+       </div>
+     </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+<div style="background-color: whitesmoke;height: 5px;width: 100%;margin-top: 50px;"></div>
+<h4>
+    
+    
+    <br>
+    <svg t="1624376248462" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4543" width="20" height="20"><path d="M179.2 1024C81.454545 1024 0 944.872727 0 844.8s79.127273-179.2 179.2-179.2c39.563636 0 76.8 13.963636 109.381818 37.236364l9.309091 6.981818V134.981818c0-34.909091 27.927273-62.836364 60.509091-62.836363l598.109091-69.818182h4.654545C993.745455 0 1024 27.927273 1024 62.836364v672.581818c0 48.872727-18.618182 93.090909-53.527273 125.672727-32.581818 32.581818-79.127273 51.2-125.672727 51.2-97.745455 0-179.2-79.127273-179.2-179.2 0-97.745455 79.127273-179.2 179.2-179.2 39.563636 0 79.127273 13.963636 109.381818 37.236364l9.309091 6.981818V286.254545l-605.090909 65.163637v493.381818c-2.327273 100.072727-81.454545 179.2-179.2 179.2z m0-295.563636c-65.163636 0-118.690909 53.527273-118.690909 118.690909s53.527273 118.690909 118.690909 118.690909 118.690909-53.527273 118.690909-118.690909c-2.327273-67.490909-53.527273-118.690909-118.690909-118.690909z m665.6-111.709091c-65.163636 0-118.690909 53.527273-118.690909 118.690909s53.527273 118.690909 118.690909 118.690909 118.690909-53.527273 118.690909-118.690909-53.527273-118.690909-118.690909-118.690909z m-488.727273-325.818182l605.090909-65.163636V60.509091l-598.109091 69.818182h-6.981818v160.581818z" p-id="4544"></path></svg>                   
+    &nbsp;&nbsp;TNT随身听
+   </h4>
+
+<div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+          <br>
+        <img src="小小孩.png" style="border-radius: 300px;width: 150px;height: 150px;margin-left: 105px;border: 5px solid pink;">
+        <h2 style="margin-left: 140px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 25px;"><br>小小孩</h2>
+        <p><a class="btn btn-secondary" href="#"> Know&raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+  
+          <br>
+        <img src="少年时代1.jpg" style="border-radius: 300px;width: 150px;height: 150px;margin-left: 105px;border: 5px solid pink;">
+        <h2 style="margin-left: 130px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 25px;"><br>少年时代</h2>
+        <p><a class="btn btn-secondary" href="#"> Know&raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+  
+          <br>
+        <img src="爆米花.jpg" style="border-radius: 300px;width: 150px;height: 150px;margin-left: 105px;border: 5px solid pink;">
+        <h2 style="margin-left: 140px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 25px;"><br>爆米花</h2>
+        <p><a class="btn btn-secondary" href="#"> Know&raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      
+    </div><!-- /.row -->
+    <br>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+          
+        <h3 class="featurette-heading " style="
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+        <strong>马嘉祺</strong><span class="text-muted"></span></h3>
+        <p class="lead" style="text-align: left;margin-left: 10px;margin-top: 10px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;line-height: 1.5;">
+             <br>
+            马嘉祺，2002年12月12日出生于河南省郑州市。  <br>时代峰峻旗下艺人，时代少年团队长。
+            <br>
+            代表影视作品：《快乐星球第五部》《念念》《第二人生》  <br>
+            代表综艺作品：《我就是演员》《少年ON FIRE》  <br>
+            代表音乐作品：《血腥爱情故事》《末路狂花》《雪落下的声音》等等
+            <br><br></p>
+            <p style="color: darkgray;font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+            遇见喜欢的就多吃两口，不喜欢就换个口味，别等吃不到的时候后悔
+        </p>
+    </div>
+      <div class="col-md-5">
+     <img src="ma1.jpg" style="width: 450px;height: 400px;">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h3 class="featurette-heading " style="
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+        <strong>丁程鑫</strong><span class="text-muted"></span></h3>
+        <p class="lead" style="text-align: left;margin-left: 10px;margin-top: 10px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;line-height: 1.5;">
+             <br>
+            丁程鑫，2002年2月24日出生于四川省资阳市。  <br>时代峰峻旗下艺人，时代少年团队员。
+            <br>
+            代表影视作品：《甜蜜暴击》《念念》《第二人生》  <br>
+            代表综艺作品：《演员请就位》《少年ON FIRE》《快乐大本营》  <br>
+            代表音乐作品：《血腥爱情故事》《wake up》《负重一万斤长大》等
+            <br><br></p>
+            <p style="color: darkgray;font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+            从零到一百还可能是从一百到很久很久
+        </p>      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="di.jpg" style="width: 400px;height: 400px;">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h3 class="featurette-heading " style="
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+        <strong>宋亚轩</strong><span class="text-muted"></span></h3>
+        <p class="lead" style="text-align: left;margin-left: 10px;margin-top: 10px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;line-height: 1.5;">
+             <br>
+            马嘉祺，2004年03月04日出生于山东省滨州市。  <br>时代峰峻旗下艺人，时代少年团队员。
+            <br>
+           
+            代表综艺作品：<br>《音乐大师课》《少年ON FIRE》《王牌对王牌》《萌萌探探案》  <br>
+            代表音乐作品：<br>《负重一万几长大》《夜空中最亮的星》《兰花草》等等
+            <br><br></p>
+            <p style="color: darkgray;font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+           宋亚轩会永远是宋亚轩
+        </p>      </div>
+      <div class="col-md-5">
+        <img src="so.jpg" style="width: 450px;height: 400px;">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h3 class="featurette-heading " style="
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+            <strong>刘耀文</strong><span class="text-muted"></span></h3>
+            <p class="lead" style="text-align: left;margin-left: 10px;margin-top: 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;line-height: 1.5;">
+                 <br>
+              刘耀文，2005年9月23日出生于重庆市。  <br>时代峰峻旗下艺人，时代少年团队员。
+                <br>
+                代表影视作品：《念念》《第二人生》  <br>
+                代表综艺作品：《少年ON FIRE》  <br>
+                代表音乐作品：《Trouble maker》《让一让》《说散就散》等等
+                <br><br></p>
+                <p style="color: darkgray;font-size: 20px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                人本身可以是聚光灯，我自己就是发光体
+            </p>       
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="liu.jpg" style="width: 400px;height: 400px;">
+        </div>
+      </div>
+  
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-7">
+            <h3 class="featurette-heading " style="
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+            <strong>张真源</strong><span class="text-muted"></span></h3>
+            <p class="lead" style="text-align: left;margin-left: 10px;margin-top: 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;line-height: 1.5;">
+                 <br>
+              张真源，2003年4月16日出生于重庆市  <br>时代峰峻旗下艺人，时代少年团队员。
+                <br>
+                代表影视作品：《念念》《第二人生》  <br>
+                代表综艺作品：《少年ON FIRE》  <br>
+                代表音乐作品：《红玫瑰》《末路狂花》等等 <br>
+                原创音乐作品：《心桥》《光影》
+                <br><br></p>
+                <p style="color: darkgray;font-size: 20px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                机会不可能等着你，原地踏步久了，就更难迈出下一步
+            </p>        </div>
+        <div class="col-md-5">
+          <img src="zzy.jpg" style="width: 450px;height: 400px;">
+        </div>
+      </div>
+  
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h3 class="featurette-heading " style="
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+            <strong>严浩翔</strong><span class="text-muted"></span></h3>
+            <p class="lead" style="text-align: left;margin-left: 10px;margin-top: 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;line-height: 1.5;">
+                 <br>
+                严浩翔，2004年8月16日出生于广东省广州市。  <br>时代峰峻旗下艺人，时代少年团队员。
+                <br>
+               
+                代表综艺作品：《接招吧前辈》《少年ON FIRE》  <br>
+                代表音乐作品：《飘向北方》《巴比伦》《做我的猫》等等
+                <br><br></p>
+                <p style="color: darkgray;font-size: 20px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                一些恐惧的东西，在你成长以后，其实都会被打破
+            </p>        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="yan.jpg" style="width: 400px;height: 400px;">
+        </div>
+      </div>
+  
+      <hr class="featurette-divider">
+
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-7">
+            <h3 class="featurette-heading " style="
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+            <strong>贺峻霖</strong><span class="text-muted"></span></h3>
+            <p class="lead" style="text-align: left;margin-left: 10px;margin-top: 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;line-height: 1.5;">
+                 <br>
+                贺峻霖，2004年6月15日出生于四川省成都市  <br>时代峰峻旗下艺人，时代少年团队员。
+                <br>
+                代表影视作品：《念念》《第二人生》  <br>
+                代表综艺作品：《接招吧前辈》《少年ON FIRE》  <br>
+                代表音乐作品：《为你我受冷风吹》《做我的猫》《红玫瑰》等等
+                <br><br></p>
+                <p style="color: darkgray;font-size: 20px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                小事偶尔倒霉一下，也许大的幸运就在后边等着我呢
+            </p>        </div>
+        <div class="col-md-5">
+          <img src="he.jpg" style="width: 450px;height: 400px;">
+        </div>
+      </div>
+  
+      <hr class="featurette-divider">
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+       <!--尾部-->
+       <h4>
+        <br><br>
+        <br></h4>
+
+        <div class="card text-center">
+            <div class="card-header">
+              <strong>ABOUT US</strong>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title"><strong>时代峰峻</strong></h5>
+                <p class="card-text">北京时代峰峻文化艺术发展有限公司（Time Fengjun Entertainment）成立于2009年。<br>
+                  公司本部设立在北京，是一家集组织大型文艺演出、艺人培训、艺人经纪为一体的专业文化娱乐传播机构，也是率先采用练习生养成模式进行明星培养的国内经纪娱乐公司。<br>
+      
+                  公司从成立之初就开始招募练习生，并着手打造艺人品牌TF家族，现公司旗下所属艺人中拥有当红组合TFBOYS、时代少年团。</p>
+              </div>
+          </div>
+
+
+     
+      <div id="footer"> 
+        <div class="f1">
+          <ul>
+            <li>
+              <div>
+              <img src="11.jpg" />
+              <p style="margin-top: 10px;">重庆市南岸区南滨路<br>22号长江国际18楼</p>
+              </div>
+            </li>
+            <li>
+              <div>
+              <img src="12.jpg" />
+              <p style="margin-top: 10px;">2668745269@qq.com</p>
+               </div>
+            </li>
+            <li>
+              <div>
+              <img src="15.jpg" />
+              <p style="margin-top: 10px;">110-110-1110</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <img src="14.jpg" alt="">
+                <p style="text-align: center;">扫一扫加入TNT粉丝俱乐部</p>
+            </li>
+          </ul>
+        </div><!-- f1 -->
+
+  
+      <div style="width: 200px;margin: 0 auto;">
+        <hr style="margin-top: 50px;width:200px;"><br>
+        <p>&nbsp;&nbsp;版权所有@TNT俱乐部</p>
+      </div>
+     
+</body>
+</html>

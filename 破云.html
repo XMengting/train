@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" 
+		  href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <title>照片墙</title>
+    <style>
+    * {
+    margin:0;
+    padding:0;
+    }
+ 
+    body {
+        background-image:url(../img/破云背景音乐.jpg);
+        padding-top: 10px;
+    }
+ 
+    .container {
+        width:950px;
+        height:100px;
+        margin:30px auto;
+		
+    }
+	
+ 
+     .container img:hover{  
+	    -webkit-animation-play-state:paused; /*当鼠标移动到头像上时动画停止*/ 
+	}  
+	@-webkit-keyframes run{  
+	    from{  
+	        -webkit-transform:rotate(0deg);  
+	    }  
+	    to{  
+	        -webkit-transform:rotate(360deg); /*头像动画360度旋转*/ 
+	    }  
+	} 
+ 
+     .container img {
+		width:150px;  
+	    height: 150px;  
+	    background-size:100% 100%;
+	    border-radius:75px;
+	    border:2px solid darkgray;
+		float:left;  
+	    -webkit-animation:run 6s linear 0s infinite;/*头像动画*/	}
+	.name{
+		width:300px;
+		height:100px;
+		margin-left:20px;
+		text-align: center;
+	}
+	span{
+		font-size:50px; 
+		position:absolute;
+		top:100px;
+		left:570px;
+		font-family: "仿宋";
+		font-weight: bolder;
+	}
+
+    .button1{
+        width: 100px;
+        height: 30px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        background-color: #f0ffff;
+        font-style:#fff; 
+		
+    } 
+	.button2{
+	    width: 100px;
+	    height: 30px;
+	    -moz-border-radius: 4px;
+	    -webkit-border-radius: 4px;
+	    border-radius: 4px;
+	    background-color:#F0FFFF;
+	    font-style:#fff; 
+		
+	} 
+	h{
+		font-family: "kaiti";
+		font-weight: bolder;
+		font-size: 20px;
+		text-align: center;
+	
+		}
+	.word{
+		margin-left: 45px;
+		margin-right: 45px;
+		padding-left: 45px;
+		padding-right: 45px;
+		
+	}
+
+    </style>
+</head>
+<body>
+	<a href="目录.html">
+		<input class="button2" name="Submit " type="submit" value="首页" onclick="" /> 
+	</a>
+   <input class="button1" name="Submit " type="submit" value="返回" onclick="javascript:history.back()" />
+   <a href="留言墙.html">
+   	<input class="button2" name="Submit " type="submit" value="下一页" onclick="" /> 
+   </a>
+   <fieldset style="text-align: center;float: right;">
+	   <legend><h>破云</h></legend>
+	   <div id="player">
+	    
+		   <audio controls="controls" src="../songs/晨栀%20-%20【破云·峫停】荆途遇你%20(剧情版%20Cover：洪卓立).mp3"
+		    autoplay="autoplay" loop="loop">破云</audio>
+	
+		
+	   </div>
+   </fieldset>
+  
+   <div class="container">
+       <img class="img img1" src="1.jpg">
+
+   </div>
+   <div class="name"><span>破云</span></div>
+   
+   <div class="word">
+	   <h>
+		    &nbsp;&nbsp; &nbsp;&nbsp;纵使千疮百孔，年华老去，我还有你寻遍千山万水，踏破生死之际——再次相聚之前，
+		   谢谢你带我回到这人世间。
+	   </h><br /><br /><br />
+	   
+	   <h>
+		    &nbsp;&nbsp; &nbsp;&nbsp;“停云霭霭，时雨濛濛；八表同昏，平陆成江。”严峫摩挲着下巴，突然说：“好名字。”
+		
+	   </h><br /><br /><br />
+	   <h>
+		    &nbsp;&nbsp; &nbsp;&nbsp;抱最好的希望，做最坏的打算，尽最大的努力。
+	   </h><br /><br /><br />
+	   <h>
+	   	    &nbsp;&nbsp; &nbsp;&nbsp;我想跟你一起从战场上手拉手凯旋，再不济肩并肩马革裹尸.
+	   </h><br /><br /><br />
+	   <h>
+	   		&nbsp;&nbsp; &nbsp;&nbsp;“我从未拥有过来自父母手足的亲情，不曾体验过男女之间的爱情，
+		甚至没交过什么朋友，连友情都相当匮乏。如果说曾有人最接近我心里那个位置的话，那个人是你。”
+
+	   </h><br /><br /><br />
+	   <h>
+	   		&nbsp;&nbsp; &nbsp;&nbsp;那些欢笑玩耍的过往，七月未央的夏夜，余晖中的浮尘，灿烂的灯海，
+		在此刻汇聚成洪流轰然破闸，吟唱在虚空中盘旋上升直至天堂: 你的荣光，你的脸庞，那如钻石般璀璨的光茫 
+		可否爱我如初，直至地老天荒？ <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;——当韶华逝去，演出落幕，白夏流年已成过往；你可否依然为我喝彩鼓掌，直至地老天荒？
+			 
+	   </h><br /><br /><br />
+	   <h>
+	   		&nbsp;&nbsp; &nbsp;&nbsp;风从天穹深处席卷大地，穿过山川河流，平原铁轨，
+			以及城市浩瀚飘渺的灯火，吹着尖锐的哨子，旋转飞舞直奔地平线尽头。
+	   
+	   </h><br /><br /><br />
+	   <h>
+	   		&nbsp;&nbsp; &nbsp;&nbsp;我们在看悬疑小说的时候，都是跟随主角怀疑所有可能作案的对象，
+			再一层层抽丝剥茧后，将坏人绳之以法。但为什么我们从未怀疑过主角呢？
+	   
+	   </h><br /><br /><br />
+	   <h>
+	   		&nbsp;&nbsp; &nbsp;&nbsp;不论前方是否樯倾楫摧，踏出一步便将粉身碎骨；所有罪恶与仇恨，
+			都将在你我的手中了结。<br>
+			我来接你了，江停。
+	   
+	   </h><br /><br /><br />
+	   <h>
+	   		&nbsp;&nbsp; &nbsp;&nbsp;
+			“是看一眼少一眼。就算咱俩一块活到九十九，不也是过一天少一天吗？没毛病。” 
+			<br>“我活到九十九，你九十七就够了。”
+	   
+	   </h><br /><br /><br />
+	   <h>
+	   		&nbsp;&nbsp; &nbsp;&nbsp;你只能做你自己，永远都无法取代任何人，哪怕那个人死了都一样。
+	   
+	   </h><br /><br /><br />
+	   <h>
+	   		&nbsp;&nbsp; &nbsp;&nbsp;每一个被害人，都曾经是父母的寄托和骄傲。
+	   
+	   </h><br /><br /><br />
+	   <h>
+	   		&nbsp;&nbsp; &nbsp;&nbsp;
+			“回忆，情感，心理印记，这些细节都随着离别被反复升华，死亡是最好的滤镜。” <br>
+			“死人不可超越，死人永远是胜利者，就是这么个道理。”
+	   
+	   </h><br /><br /><br />
+	   <h>
+	   		&nbsp;&nbsp; &nbsp;&nbsp;
+	   			犹如困兽在陷阱中左冲右突，明知道四面楚歌，却还想拼死撞出一条生路，哪怕最终粉身碎骨。
+
+	   
+	   </h><br /><br /><br />
+	   <h>
+	   		&nbsp;&nbsp; &nbsp;&nbsp;
+	   		但他知道不论再以假乱真的精心演出都有可能毁在最微不足道的细节里，命运就是会那么安排，
+			让平时毫不珍惜的东西，成为生命终结时触手不及的奢求。
+	   </h><br /><br /><br />
+	   <h>
+	   		&nbsp;&nbsp; &nbsp;&nbsp;
+	   		命运就像精巧的机关，在每一个可能改变的节点上严丝合缝，所有悲欢离合，所有幽微关窍，
+			最终都将导向冥冥中早已谱写好了的收场
+	   </h><br /><br /><br />
+	   <h>
+	   		&nbsp;&nbsp; &nbsp;&nbsp;
+	   		人海茫茫，鬼影幢幢，它在暗处窥伺你，你却无法抓住这只披着人皮的鬼。
+	   </h><br /><br /><br />
+   </div>
+ 
+  
+</body>
+
+</html> 
